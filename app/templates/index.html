@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+</head>
+<body>
+    <h1>Face Recognition</h1>
+    
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .jpeg">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Annotations</h2>
+    <ul>
+        {% for annotation in annotations %}
+            <li>{{ annotation.image_path }} - {{ annotation.person_id }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
