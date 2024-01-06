@@ -1,0 +1,25 @@
+2024-01-06 17:07:33,048 ERROR: Error in classify_images function: [Errno 2] No such file or directory: 'path/to/your/uploaded/files' [in /Users/prajwal/Developer/Local Images Classification/app/utils.py:57]
+Traceback (most recent call last):
+  File "/Users/prajwal/Developer/Local Images Classification/app/utils.py", line 34, in classify_images
+    for image_file in os.listdir(image_folder):
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/your/uploaded/files'
+2024-01-06 17:07:37,899 ERROR: Error in classify_images function: [Errno 2] No such file or directory: 'path/to/your/uploaded/files' [in /Users/prajwal/Developer/Local Images Classification/app/utils.py:57]
+Traceback (most recent call last):
+  File "/Users/prajwal/Developer/Local Images Classification/app/utils.py", line 34, in classify_images
+    for image_file in os.listdir(image_folder):
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/your/uploaded/files'
+2024-01-06 17:12:07,824 ERROR: Error in classify_images function: [Errno 2] No such file or directory: 'path/to/your/uploaded/files' [in /Users/prajwal/Developer/Local Images Classification/app/utils.py:57]
+Traceback (most recent call last):
+  File "/Users/prajwal/Developer/Local Images Classification/app/utils.py", line 34, in classify_images
+    for image_file in os.listdir(image_folder):
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/your/uploaded/files'
+2024-01-06 17:12:51,023 ERROR: Error in classify_images function: [Errno 2] No such file or directory: 'path/to/your/uploaded/files' [in /Users/prajwal/Developer/Local Images Classification/app/utils.py:57]
+Traceback (most recent call last):
+  File "/Users/prajwal/Developer/Local Images Classification/app/utils.py", line 34, in classify_images
+    for image_file in os.listdir(image_folder):
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/your/uploaded/files'
+2024-01-06 17:13:03,390 ERROR: Error in classify_images function: [Errno 2] No such file or directory: 'path/to/your/uploaded/files' [in /Users/prajwal/Developer/Local Images Classification/app/utils.py:57]
+Traceback (most recent call last):
+  File "/Users/prajwal/Developer/Local Images Classification/app/utils.py", line 34, in classify_images
+    for image_file in os.listdir(image_folder):
+FileNotFoundError: [Errno 2] No such file or directory: 'path/to/your/uploaded/files'

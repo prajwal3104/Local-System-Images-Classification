@@ -4,20 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Recognition</title>
+    <!-- Include Dropzone.js from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css" integrity="sha512-PzJOmS7pAODdi5BE3z3dOBo+nfbbzjt6xglSb/9mGg8e+VBoZ/ZN6VIiCZZPh+KjCv+m6aVBb+ZD6C5E/DTfFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js" integrity="sha512-4bs5GcUxevZrl3TQx4l+/Df6KAkqtV6qo3ONsI2Yj/YJXlrBGG8xm+JS9Ux13slz6xpOsnz2eNf1Dz6qW7/Wbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <h1>Face Recognition</h1>
     
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".jpg, .jpeg">
+    <!-- Add Dropzone area for file upload -->
+    <form action="/upload" method="post" class="dropzone" id="my-dropzone" enctype="multipart/form-data">
+        <div class="fallback">
+            <input name="file" type="file" multiple accept=".jpg, .jpeg" />
+        </div>
         <input type="submit" value="Upload">
     </form>
-
+    
     <h2>Annotations</h2>
     <ul>
-        {% for annotation in annotations %}
-            <li>{{ annotation.image_path }} - {{ annotation.person_id }}</li>
-        {% endfor %}
+        <!-- You can add any UI elements related to image annotations here -->
     </ul>
+
+    <!-- Initialize Dropzone -->
+    <script>
+        Dropzone.options.myDropzone = {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 10, // MB
+            addRemoveLinks: true,
+            acceptedFiles: ".jpg, .jpeg",
+            init: function () {
+                this.on("success", function (file, response) {
+                    // Handle successful uploads (if needed)
+                });
+                this.on("removedfile", function (file) {
+                    // Handle file removal (if needed)
+                });
+            }
+        };
+    </script>
 </body>
 </html>
